@@ -1,14 +1,17 @@
 import React from 'react';
-import { Wifi, Building2, Home, Users, BookOpen, Trophy, TrendingUp, HandshakeIcon, Globe } from 'lucide-react';
+import { Building2, Home, Users, BookOpen, HandshakeIcon, Globe } from 'lucide-react';
 
 const FeatureCard = ({ icon: Icon, text, bgColor = "bg-black" }) => {
   return (
-    <div className={`${bgColor} text-white p-6 rounded-lg flex items-center gap-4 shadow-lg`}>
+    <div
+      className={`${bgColor} text-white p-6 rounded-lg flex items-center gap-4 shadow-lg hover:bg-cyan-500 transition-colors duration-300`}
+    >
       <Icon size={32} className="flex-shrink-0" />
       <p className="text-lg">{text}</p>
     </div>
   );
 };
+
 
 const WhyTAS = () => {
   const features = [
@@ -20,7 +23,7 @@ const WhyTAS = () => {
     {
       icon: Globe,
       text: "Outstanding Academics with Record-Breaking Results",
-      bgColor: "bg-cyan-500"
+      bgColor: "bg-black"
     },
     {
       icon: BookOpen,
@@ -42,25 +45,22 @@ const WhyTAS = () => {
       text: "Extremely Friendly and Approachable Management",
       bgColor: "bg-black"
     },
-    {
-      icon: Wifi,
-      text: "Wi-Fi, Smart Classrooms, Camera Monitored and Secure Campus",
-      bgColor: "bg-black"
-    },
-    {
-      icon: TrendingUp,
-      text: "Career Information and Guidance Department at TAS",
-      bgColor: "bg-black"
-    },
-    {
-      icon: Trophy,
-      text: "10+ Olympic Sports including Gymnastics, Skating etc.",
-      bgColor: "bg-black"
-    }
   ];
+  
 
   return (
     <section className="py-16 px-4 relative overflow-hidden bg-gray-100">
+      {/* Static background with subtle fade effect */}
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: 'url("https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg")', // Replace with your image URL
+          opacity: 0.5, // Set the constant opacity for the background image
+          backgroundPosition: 'center center', // Ensure the image is centered
+          backgroundSize: 'cover',// Ensure the background image stays behind the content
+        }}
+      ></div>
+
       {/* Snowflake decorations */}
       {[...Array(8)].map((_, i) => (
         <div
@@ -71,16 +71,14 @@ const WhyTAS = () => {
             left: `${Math.random() * 100}%`,
             transform: 'scale(1.2)',
           }}
-        >
-          ❄
-        </div>
+        ></div>
       ))}
-      
-      <div className="container mx-auto">
+
+      <div className="container mx-auto relative z-10">
         <h2 className="text-4xl font-bold text-center mb-12 text-[#003366]">
-          Why TAS?
+          Why EGS?
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <FeatureCard
