@@ -12,7 +12,6 @@ const FeatureCard = ({ icon: Icon, text, bgColor = "bg-black" }) => {
   );
 };
 
-
 const WhyTAS = () => {
   const features = [
     {
@@ -46,35 +45,18 @@ const WhyTAS = () => {
       bgColor: "bg-black"
     },
   ];
-  
 
   return (
-    <section className="py-16 px-4 relative overflow-hidden bg-gray-100">
-      {/* Static background with subtle fade effect */}
-      <div
-        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
-        style={{
-          backgroundImage: 'url("https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg")', // Replace with your image URL
-          opacity: 0.5, // Set the constant opacity for the background image
-          backgroundPosition: 'center center', // Ensure the image is centered
-          backgroundSize: 'cover',// Ensure the background image stays behind the content
-        }}
-      ></div>
-
-      {/* Snowflake decorations */}
-      {[...Array(8)].map((_, i) => (
-        <div
-          key={i}
-          className="absolute text-gray-300"
-          style={{
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-            transform: 'scale(1.2)',
-          }}
-        ></div>
-      ))}
-
-      <div className="container mx-auto relative z-10">
+    <section
+      className="relative py-16 px-4 overflow-hidden"
+      style={{
+        backgroundImage: 'url("https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg")', // Replace with your image URL
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+      }}
+    >
+      <div className="container mx-auto relative z-10 bg-white bg-opacity-80 rounded-lg shadow-lg p-8">
         <h2 className="text-4xl font-bold text-center mb-12 text-[#003366]">
           Why EGS?
         </h2>
