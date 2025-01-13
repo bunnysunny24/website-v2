@@ -1,15 +1,12 @@
 import React from 'react';
 import { Phone, Mail } from 'lucide-react'; // Keep these if used
-import { FaSignInAlt } from 'react-icons/fa'
-
+import { FaSignInAlt } from 'react-icons/fa';
 
 const Header = () => {
-  const navigate = useNavigate(); // Get the navigate function
-
+  // Open the login page in a new tab
   const handleLoginSignupClick = () => {
-    navigate('/login'); // Navigate to the login page
+    window.open('/login', '_blank'); // Opens the login page in a new tab
   };
-
 
   return (
     <header className="w-full relative z-20">

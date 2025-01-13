@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Alert } from "@/components/ui/alert";
+import Input from "./ui/Input";  // Corrected import
+import Button from "./ui/Button";  // Corrected import
+import Alert from "./ui/Alert";  // Corrected import
 
 const LoginPage = () => {
   const [isLogin, setIsLogin] = useState(true);
