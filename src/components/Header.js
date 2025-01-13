@@ -1,7 +1,16 @@
 import React from 'react';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react'; // Keep these if used
+import { FaSignInAlt } from 'react-icons/fa'
+
 
 const Header = () => {
+  const navigate = useNavigate(); // Get the navigate function
+
+  const handleLoginSignupClick = () => {
+    navigate('/login'); // Navigate to the login page
+  };
+
+
   return (
     <header className="w-full relative z-20">
       {/* Top contact bar */}
@@ -14,6 +23,10 @@ const Header = () => {
           <div className="flex items-center">
             <Mail size={16} className="mr-2" />
             <a href="mailto:theasianschool@gmail.com">einsteintheschool2017@gmail.com</a>
+          </div>
+          <div className="flex items-center cursor-pointer" onClick={handleLoginSignupClick}>
+            <FaSignInAlt size={16} className="mr-2" />
+            <span>Login/Signup</span>
           </div>
         </div>
       </div>

@@ -69,18 +69,15 @@ const AdmissionSection = () => {
                     <option value="nursery">Nursery</option>
                     <option value="kg">KG</option>
                     <option value="1">Class 1</option>
+                    <option value="2">Class 2</option>
+                    <option value="3">Class 3</option>
+                    <option value="4">Class 4</option>
+                    <option value="5">Class 5</option>
+                    <option value="6">Class 6</option>
+                    <option value="7">Class 7</option>
                     {/* Add more class options */}
                   </select>
                 </div>
-              </div>
-
-              {/* School Type Row */}
-              <div>
-                <select className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-cyan-500">
-                  <option value="">—Please choose an option—</option>
-                  <option value="day">Day Scholar</option>
-                  <option value="boarding">Boarding</option>
-                </select>
               </div>
 
               {/* Submit Button */}
