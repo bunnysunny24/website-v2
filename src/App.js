@@ -8,8 +8,9 @@ import Footer from './components/Footer';
 import EventsGrid from './components/EventsGrid';
 import PrincipalsDesk from './components/PrincipalsDesk';
 import SportsSection from './components/SportsSection';
-import Login from './components/login';
 import LoginPageLayout from './components/LoginPageLayout'; // Import the new layout
+import Login from './components/login';
+import StudentDashboard from './components/StudentDashboard'; // Import the StudentDashboard component
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
             <Login /> {/* Only the login form will be shown here */}
           </LoginPageLayout>
         } />
+
+        {/* Route for the student dashboard after login */}
+        <Route path="/student-dashboard" element={<StudentDashboard />} />
       </Routes>
     </div>
   );
