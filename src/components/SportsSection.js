@@ -67,9 +67,6 @@ const SportsSection = () => {
           <h3 className="text-2xl font-bold">{currentSport.name}</h3>
           <div className="w-16 h-1 bg-cyan-500"></div>
           <p className="text-gray-700">{currentSport.description}</p>
-          <button className="bg-navy-900 text-white px-6 py-2 rounded hover:bg-navy-800 transition-colors">
-            Read More
-          </button>
         </div>
       </div>
 
@@ -84,9 +81,6 @@ const SportsSection = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30 flex flex-col justify-end p-6">
               <h3 className="text-white text-xl font-bold mb-4">{sport.name}</h3>
-              <button className="bg-white/20 text-white backdrop-blur-sm px-4 py-2 rounded-full w-fit hover:bg-white/30 transition-colors">
-                Read More
-              </button>
             </div>
           </div>
         ))}
