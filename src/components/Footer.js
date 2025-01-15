@@ -26,8 +26,7 @@ const Footer = () => {
                 'Franchise',
                 'E-Prospectus',
                 'Registration Form',
-                'Fee Structure',
-                'Blogs',
+                'Fee Structure',,
                 'Privacy Policy',
                 'Terms & Conditions'
               ].map((link) => (
@@ -108,7 +107,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
           <p>Copyright © 2025 Einstein Global School</p>
           <p className="flex items-center">
-            Powered By <a href="https://www.linkedin.com/in/bhavashesh/" className="text-cyan-400 ml-1">bunny</a>
+            Made By <a href="https://www.linkedin.com/in/bhavashesh/" className="text-cyan-400 ml-1">bunny</a>
           </p>
         </div>
       </div>
