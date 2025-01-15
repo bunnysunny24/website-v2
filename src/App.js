@@ -80,19 +80,58 @@ function App() {
         />
 
         {/* Additional routes */}
-        <Route path="/mission" element={<Mission />} />
-        <Route path="/vision" element={<Vision />} />
-        <Route path="/principals-desk" element={<PrincipalsDesk />} />
-        <Route path="/curriculum" element={<Curriculum />} />
-        <Route path="/exams" element={<Exams />} />
-        <Route path="/sports" element={<SportsSection />} />
-        <Route path="/extracurricular" element={<Extracurricular />} />
-        <Route path="/clubs" element={<Clubs />} />
-        <Route path="/apply-now" element={<AdmissionSection />} />
-        <Route path="/fee-structure" element={<FeeStructure />} />
-        <Route path="/become-franchise" element={<BecomeaFranchise />} />
-        <Route path="/franchise-info" element={<FranchiseInformation />} />
-        <Route path="/view-disclosure" element={<ViewDisclosure />} />
+        <Route path="/mission" element={<>
+              <Hero isEventPage />
+              <Mission/>
+            </>} />
+        <Route path="/vision" element={<>
+              <Hero isEventPage />
+              <Vision />
+            </>} />
+        <Route path="/principals-desk" element={<>
+              <Hero isEventPage />
+              <PrincipalsDesk />
+            </>} />
+        <Route path="/curriculum" element={<>
+              <Hero isEventPage />
+              <Curriculum />
+            </>} />
+        <Route path="/exams" element={<>
+              <Hero isEventPage />
+              <Exams />
+            </>} />
+        <Route path="/sports" element={<>
+              <Hero isEventPage />
+              <SportsSection />
+            </>} />
+        <Route path="/extracurricular" element={<>
+              <Hero isEventPage />
+              <Extracurricular />
+            </>} />
+        <Route path="/clubs" element={<>
+              <Hero isEventPage />
+              <Clubs />
+            </>} />
+        <Route path="/apply-now" element={<>
+              <Hero isEventPage />
+              <AdmissionSection />
+            </>} />
+        <Route path="/fee-structure" element={<>
+              <Hero isEventPage />
+              <FeeStructure />
+            </>} />
+        <Route path="/become-franchise" element={<>
+              <Hero isEventPage />
+              <BecomeaFranchise />
+            </>} />
+        <Route path="/franchise-info" element={<>
+              <Hero isEventPage />
+              <FranchiseInformation />
+            </>} />
+        <Route path="/view-disclosure" element={<>
+              <Hero isEventPage />
+              <ViewDisclosure />
+            </>} />
       </Routes>
       <Footer />
     </>

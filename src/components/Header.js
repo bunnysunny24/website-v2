@@ -12,9 +12,13 @@ const DropdownMenu = ({ title, links }) => {
       </button>
       <div className="absolute bg-white text-black p-2 rounded shadow-md mt-1 w-48 z-50 hidden group-hover:block">
         {links.map((link, index) => (
-          <a href={link.href} className="block py-1 px-2 hover:bg-gray-100" key={index}>
+          <Link 
+            to={link.href} // Use Link here instead of <a> tag
+            className="block py-1 px-2 hover:bg-gray-100" 
+            key={index}
+          >
             {link.text}
-          </a>
+          </Link>
         ))}
       </div>
     </div>
@@ -58,25 +62,25 @@ const Header = () => {
               <DropdownMenu
                 title="About"
                 links={[
-                  { href: '#mission', text: 'Mission' },
-                  { href: '#vision', text: 'Vision' },
-                  { href: '#team', text: 'Our Team' },
+                  { href: '/mission', text: 'Mission' },
+                  { href: '/vision', text: 'Vision' },
+                  { href: '/team', text: 'Our Team' },
                 ]}
               />
               <DropdownMenu
                 title="Academics"
                 links={[
-                  { href: '#curriculum', text: 'Curriculum' },
-                  { href: '#programs', text: 'Programs' },
-                  { href: '#exams', text: 'Exams' },
+                  { href: '/curriculum', text: 'Curriculum' },
+                  { href: '/programs', text: 'Programs' },
+                  { href: '/exams', text: 'Exams' },
                 ]}
               />
               <DropdownMenu
                 title="Beyond Academics"
                 links={[
-                  { href: '#sports', text: 'Sports' },
-                  { href: '#extracurricular', text: 'Extracurricular' },
-                  { href: '#clubs', text: 'Clubs' },
+                  { href: '/sports', text: 'Sports' },
+                  { href: '/extracurricular', text: 'Extracurricular' },
+                  { href: '/clubs', text: 'Clubs' },
                 ]}
               />
             </div>
@@ -98,21 +102,21 @@ const Header = () => {
               <DropdownMenu
                 title="Admission"
                 links={[
-                  { href: '#apply', text: 'Apply Now' },
-                  { href: '#fees', text: 'Fee Structure' },
+                  { href: '/apply-now', text: 'Apply Now' },
+                  { href: '/fee-structure', text: 'Fee Structure' },
                 ]}
               />
               <DropdownMenu
                 title="Franchise"
                 links={[
-                  { href: '#become-franchise', text: 'Become a Franchise' },
-                  { href: '#franchise-info', text: 'Franchise Information' },
+                  { href: '/become-franchise', text: 'Become a Franchise' },
+                  { href: '/franchise-info', text: 'Franchise Information' },
                 ]}
               />
               <DropdownMenu
                 title="Mandatory Disclosure"
                 links={[
-                  { href: '#disclosure', text: 'View Disclosure' },
+                  { href: '/view-disclosure', text: 'View Disclosure' },
                 ]}
               />
             </div>
