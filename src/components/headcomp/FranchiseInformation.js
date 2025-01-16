@@ -135,13 +135,13 @@ const FranchiseInformation = () => {
           </p>
           <ul className="list-none pl-6 space-y-4 text-lg leading-relaxed">
             <li>
-              <strong>Email:</strong> franchise@ourschool.com
+              <strong>Email:</strong> einsteintheschool2017@gmail.com
             </li>
             <li>
-              <strong>Phone:</strong> +91 123 456 7890
+              <strong>Phone:</strong> +91-95509 48223
             </li>
             <li>
-              <strong>Address:</strong> Our School, Education City, Hyderabad, Telangana
+              <strong>Address:</strong> FH28+JQG, Street No. 5,Beside Jio office, Krishna Nagar, Moula Ali, Secunderabad, Telangana 500040Our School, Education City, Hyderabad, Telangana
             </li>
           </ul>
         </section>

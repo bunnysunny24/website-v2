@@ -8,7 +8,7 @@ const Mission = () => {
           Our Mission
         </h1>
         <p className="text-lg text-gray-700 mb-6">
-          At [School Name], we are dedicated to providing a nurturing environment where students can grow, learn, and excel. Our mission is to equip students with the skills and knowledge they need to thrive in an ever-evolving world.
+          At EGS, we are dedicated to providing a nurturing environment where students can grow, learn, and excel. Our mission is to equip students with the skills and knowledge they need to thrive in an ever-evolving world.
         </p>
 
         <div className="flex justify-center gap-8 mb-8">
