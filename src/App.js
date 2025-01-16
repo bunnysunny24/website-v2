@@ -92,7 +92,7 @@ function App() {
         <Route path="/programs" element={<><Hero isprogramPage /><EventsGrid /></>} />
         <Route path="/exams" element={<><Hero isexamsPage /><Exams /></>} />
         <Route path="/sports" element={<><Hero issportsPage /><SportsSection /></>} />
-        <Route path="/extracurricular" element={<><Hero extracurriPagee /><Extracurricular /></>} />
+        <Route path="/extracurricular" element={<><Hero extracurriPage /><Extracurricular /></>} />
         <Route path="/clubs" element={<><Hero isclubPage /><Clubs /></>} />
         <Route path="/apply-now" element={<><Hero isapplynowPage /><AdmissionSection /></>} />
         <Route path="/fee-structure" element={<><Hero isfeestructPage /><FeeStructure /></>} />
