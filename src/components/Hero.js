@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home } from 'lucide-react';
 
-const Hero = ({ isEventPage, isMissionPage, isvisionPage, isTeamPage, iscurriculumPage, isexamsPage, issportsPage, extracurriPage, isclubPage, isapplynowPage, isfeestructPage, isbecomefranchPage, isfranchinfoPage, isdisclosurePage }) => {
+const Hero = ({ isEventPage, isMissionPage, isvisionPage, isTeamPage, iscurriculumPage, isprogramPage, isexamsPage, issportsPage, extracurriPage, isclubPage, isapplynowPage, isfeestructPage, isbecomefranchPage, isfranchinfoPage, isdisclosurePage }) => {
   return (
     <div
       className="relative min-h-screen bg-cover bg-center"
@@ -84,6 +84,20 @@ const Hero = ({ isEventPage, isMissionPage, isvisionPage, isTeamPage, iscurricul
               </Link>
               <span className="text-white">/</span>
               <span className="text-white">curriculum</span>
+            </div>
+          </div>
+        ) : isprogramPage ? (
+          <div className="flex flex-col items-center space-y-2">
+            {/* First Line: Mission Text */}
+            <h1 className="text-4xl font-bold mb-2">Our Programs</h1>
+            {/* Second Line: Breadcrumb Navigation */}
+            <div className="flex items-center space-x-2 text-lg">
+              <Link to="/" className="flex items-center space-x-1 text-cyan-300 hover:text-white">
+                <Home size={20} />
+                <span>Home</span>
+              </Link>
+              <span className="text-white">/</span>
+              <span className="text-white">Programs</span>
             </div>
           </div>
         ) : isexamsPage ? (

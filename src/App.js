@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -25,9 +25,16 @@ import FranchiseInformation from './components/headcomp/FranchiseInformation';
 import ViewDisclosure from './components/headcomp/ViewDisclosure';
 
 function App() {
+  const location = useLocation();
+
+  // Paths without Header and Footer
+  const noHeaderFooterPaths = ['/login', '/student-dashboard'];
+
   return (
     <>
-      <Header />
+      {/* Render Header only if the current path is not in noHeaderFooterPaths */}
+      {!noHeaderFooterPaths.includes(location.pathname) && <Header />}
+
       <Routes>
         {/* Home Page */}
         <Route
@@ -81,18 +88,21 @@ function App() {
         <Route path="/mission" element={<><Hero isMissionPage /><Mission /></>} />
         <Route path="/vision" element={<><Hero isvisionPage /><Vision /></>} />
         <Route path="/team" element={<><Hero isTeamPage /><PrincipalsDesk /></>} />
-        <Route path="/curriculum" element={<><Hero isCurriculumPage /><Curriculum /></>} />
-        <Route path="/exams" element={<><Hero isEventPage /><Exams /></>} />
-        <Route path="/sports" element={<><Hero isEventPage /><SportsSection /></>} />
-        <Route path="/extracurricular" element={<><Hero isEventPage /><Extracurricular /></>} />
-        <Route path="/clubs" element={<><Hero isEventPage /><Clubs /></>} />
-        <Route path="/apply-now" element={<><Hero isApplyNowPage /><AdmissionSection /></>} />
-        <Route path="/fee-structure" element={<><Hero isEventPage /><FeeStructure /></>} />
-        <Route path="/become-franchise" element={<><Hero isEventPage /><BecomeaFranchise /></>} />
-        <Route path="/franchise-info" element={<><Hero isEventPage /><FranchiseInformation /></>} />
-        <Route path="/view-disclosure" element={<><Hero isEventPage /><ViewDisclosure /></>} />
+        <Route path="/curriculum" element={<><Hero iscurriculumPage /><Curriculum /></>} />
+        <Route path="/programs" element={<><Hero isprogramPage /><EventsGrid /></>} />
+        <Route path="/exams" element={<><Hero isexamsPage /><Exams /></>} />
+        <Route path="/sports" element={<><Hero issportsPage /><SportsSection /></>} />
+        <Route path="/extracurricular" element={<><Hero extracurriPagee /><Extracurricular /></>} />
+        <Route path="/clubs" element={<><Hero isclubPage /><Clubs /></>} />
+        <Route path="/apply-now" element={<><Hero isapplynowPage /><AdmissionSection /></>} />
+        <Route path="/fee-structure" element={<><Hero isfeestructPage /><FeeStructure /></>} />
+        <Route path="/become-franchise" element={<><Hero isbecomefranchPage /><BecomeaFranchise /></>} />
+        <Route path="/franchise-info" element={<><Hero isfranchinfoPage /><FranchiseInformation /></>} />
+        <Route path="/view-disclosure" element={<><Hero isdisclosurePage /><ViewDisclosure /></>} />
       </Routes>
-      <Footer />
+
+      {/* Render Footer only if the current path is not in noHeaderFooterPaths */}
+      {!noHeaderFooterPaths.includes(location.pathname) && <Footer />}
     </>
   );
 }
