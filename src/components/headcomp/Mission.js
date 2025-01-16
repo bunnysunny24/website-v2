@@ -3,7 +3,7 @@ import React from 'react';
 const Mission = () => {
   return (
     <div className="bg-cyan-600 min-h-screen flex flex-col items-center justify-center py-10 px-5">
-      <div className="max-w-4xl text-center p-6 bg-white rounded-lg shadow-xl">
+      <div className="max-w-4xl text-center p-6 bg-white rounded-lg shadow-xl">h
         <h1 className="text-5xl font-bold text-gray-800 mb-8">
           Our Mission
         </h1>
