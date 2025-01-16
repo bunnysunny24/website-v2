@@ -29,7 +29,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        {/* Route for the home page */}
+        {/* Home Page */}
         <Route
           path="/"
           element={
@@ -44,7 +44,7 @@ function App() {
           }
         />
 
-        {/* Route for the login page with a clean layout */}
+        {/* Login Page */}
         <Route
           path="/login"
           element={
@@ -54,10 +54,10 @@ function App() {
           }
         />
 
-        {/* Route for the student dashboard after login */}
+        {/* Student Dashboard */}
         <Route path="/student-dashboard" element={<StudentDashboard />} />
 
-        {/* Route for viewing all events */}
+        {/* Events */}
         <Route
           path="/events"
           element={
@@ -67,8 +67,6 @@ function App() {
             </>
           }
         />
-
-        {/* Route for event details */}
         <Route
           path="/event/:id"
           element={
@@ -79,59 +77,20 @@ function App() {
           }
         />
 
-        {/* Additional routes */}
-        <Route path="/mission" element={<>
-              <Hero isEventPage />
-              <Mission/>
-            </>} />
-        <Route path="/vision" element={<>
-              <Hero isEventPage />
-              <Vision />
-            </>} />
-        <Route path="/principals-desk" element={<>
-              <Hero isEventPage />
-              <PrincipalsDesk />
-            </>} />
-        <Route path="/curriculum" element={<>
-              <Hero isEventPage />
-              <Curriculum />
-            </>} />
-        <Route path="/exams" element={<>
-              <Hero isEventPage />
-              <Exams />
-            </>} />
-        <Route path="/sports" element={<>
-              <Hero isEventPage />
-              <SportsSection />
-            </>} />
-        <Route path="/extracurricular" element={<>
-              <Hero isEventPage />
-              <Extracurricular />
-            </>} />
-        <Route path="/clubs" element={<>
-              <Hero isEventPage />
-              <Clubs />
-            </>} />
-        <Route path="/apply-now" element={<>
-              <Hero isEventPage />
-              <AdmissionSection />
-            </>} />
-        <Route path="/fee-structure" element={<>
-              <Hero isEventPage />
-              <FeeStructure />
-            </>} />
-        <Route path="/become-franchise" element={<>
-              <Hero isEventPage />
-              <BecomeaFranchise />
-            </>} />
-        <Route path="/franchise-info" element={<>
-              <Hero isEventPage />
-              <FranchiseInformation />
-            </>} />
-        <Route path="/view-disclosure" element={<>
-              <Hero isEventPage />
-              <ViewDisclosure />
-            </>} />
+        {/* Additional Routes */}
+        <Route path="/mission" element={<><Hero isMissionPage /><Mission /></>} />
+        <Route path="/vision" element={<><Hero isvisionPage /><Vision /></>} />
+        <Route path="/team" element={<><Hero isTeamPage /><PrincipalsDesk /></>} />
+        <Route path="/curriculum" element={<><Hero isCurriculumPage /><Curriculum /></>} />
+        <Route path="/exams" element={<><Hero isEventPage /><Exams /></>} />
+        <Route path="/sports" element={<><Hero isEventPage /><SportsSection /></>} />
+        <Route path="/extracurricular" element={<><Hero isEventPage /><Extracurricular /></>} />
+        <Route path="/clubs" element={<><Hero isEventPage /><Clubs /></>} />
+        <Route path="/apply-now" element={<><Hero isApplyNowPage /><AdmissionSection /></>} />
+        <Route path="/fee-structure" element={<><Hero isEventPage /><FeeStructure /></>} />
+        <Route path="/become-franchise" element={<><Hero isEventPage /><BecomeaFranchise /></>} />
+        <Route path="/franchise-info" element={<><Hero isEventPage /><FranchiseInformation /></>} />
+        <Route path="/view-disclosure" element={<><Hero isEventPage /><ViewDisclosure /></>} />
       </Routes>
       <Footer />
     </>
